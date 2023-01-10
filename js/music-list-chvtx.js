@@ -4,6 +4,7 @@ let allMusic = [
     artist: "MONSTAR",
     img: "cohenvoitx",
     src: "cohenvoitx"
+    
   },
   {
     name: "Có hẹn với thanh xuân",
