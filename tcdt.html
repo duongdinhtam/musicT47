@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-icons.min.css">
+  <link rel="stylesheet" type="text/css" href="css/custom.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+	<!--start main area-->
+	<main>
+		<!--start navigation-->
+		<nav class="mainnav shadow navbar-expand-lg navbar navbar-dark bg-dark fixed-top" style="min-width: 350px">
+		  <div class="container-fluid">
+		    <a class="navbar-brand" href="#">
+		    	<i class="bi bi-soundwave"></i> Âm Nhạc
+		    	<div style="font-size: 13px">Lắng Nghe và Cảm Nhận</div>
+		    </a>
+
+		    <div>
+			    <div class="input-group ">
+				  <input type="text" class="form-control" placeholder="Tìm kiếm" aria-label="Recipient's username" aria-describedby="basic-addon2">
+				  <span class="bg-black text-white border-0 input-group-text" id="basic-addon2"><i class="bi bi-search"></i></span>
+				</div>
+			</div>
+
+			<div class="text-white h4 mx-3">
+				<a href="">
+					<i class="bi bi-facebook"></i>
+				</a>
+				<a href="">
+					<i class="bi bi-twitter"></i>
+				</a>
+				<a href="">
+					<i class="bi bi-instagram"></i>
+				</a>
+			</div>
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    
+		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+		        <li class="nav-item"> 
+		          <a class="nav-link active" aria-current="page" href="./music47.html">Trang chủ</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="./music47.html">Khám phá</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="./music47.html">Thịnh hành</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="./music47.html">Mới</a>
+		        </li>
+		        
+		        <li class="nav-item dropdown">
+		          <a class="nav-link dropdown-toggle" href="./music47.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		            Thêm
+		          </a>
+		          <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+		            <li><a class="dropdown-item text-white" href="#">Pop</a></li>
+		            <li><a class="dropdown-item text-white" href="#">R&B</a></li>
+		            <li><hr class="dropdown-divider"></li>
+		            <li><a class="dropdown-item text-white" href="#">Việt Nam</a></li>
+		          </ul>
+		        </li>
+
+		        <img class="rounded-circle" src="images/06.jpg" style="width:40px;height:40px">
+		        <li class="nav-item dropdown">
+		          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		            Chào, Sơn
+		          </a>
+		          <ul class="dropdown-menu dropdown-menu-end bg-dark" aria-labelledby="navbarDropdown">
+		            <li><a class="dropdown-item text-white" href="#"><i class="bi bi-person"></i> Cá nhân</a></li>
+		            <li><a class="dropdown-item text-white" href="#"><i class="bi bi-gear"></i> Cài đặt</a></li>
+		            <li><hr class="dropdown-divider"></li>
+		            <li><a class="dropdown-item text-white" href="login.html"><i class="bi bi-box-arrow-right"></i> Đăng xuất</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+		    </div>
+		  </div>
+		</nav><!--end navigation-->
+
+    <div class="wrapper">
+        <div class="top-bar">
+            <i class="material-icons">expand_more</i>
+            <span>Now Playing</span>
+            <i class="material-icons">more_horiz</i>
+        </div>
+
+        <div class="img-area">
+            <img src="" alt="">
+          
+        </div>
+
+        <div class="song-details">
+            <p class="name"></p>
+            <p class="artist"></p>
+        </div>
+
+        <div class="progress-area">
+            <div class="progress-bar">
+                <audio src="" id="main-audio"></audio>
+            </div>
+            <div class="song-timer">
+                <span class="current-time">
+                    0:00
+                </span>
+                <span class="max-duration">
+                    0:00
+                </span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
+            <i id="prev" class="material-icons" >skip_previous</i>
+            <div class="play-pause">
+                <i class="material-icons play" >play_arrow</i>
+            </div>
+            <i id="next" class="material-icons" >skip_next</i>
+            <i id="more-music" class="material-icons" >queue_music</i>
+        </div>
+
+        <div class="music-list">
+            <div class="header">
+                <div class="row">
+                    <i class="list material-icons">queue_music</i>
+                    <span>Music List</span>
+                </div>
+                <i id="close" class="material-icons">close</i>
+            </div>
+            <ul>
+              
+            </ul>
+        </div>
+    </div>
+
+    <script src="./js/music-list-tcdt.js"></script>
+    <script src="./js/script.js"></script>
+ 
+</body>
+</html>
